@@ -1,0 +1,45 @@
+.clock-rim {
+    width: 15rem;
+    height: 15rem;
+    border: 20px solid white;
+    border-radius: 100%;
+    margin: 100px auto;
+    position: relative;
+    padding: 1rem;
+    box-shadow:
+        0 0 0 4px rgba(0,0,0,0.1),
+        inset 0 0 0 3px #EFEFEF,
+        inset 0 0 10px black,
+        0 0 10px rgba(0,0,0,0.2);
+    }
+
+.clock {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px);
+}
+
+.hand {
+    transform-origin: right center; 
+    width: 50%;
+    height: 6px;
+    background: white;
+    position: absolute;
+    top: 50%;
+}
+
+#hour-hand {
+    height: 6px;
+    background-color: black;
+}
+
+#min-hand {
+    height: 4px;
+    background-color: black;
+}
+
+#second-hand {
+    height: 2px;
+    background-color: black;
+}

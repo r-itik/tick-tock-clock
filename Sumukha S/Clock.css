@@ -1,0 +1,130 @@
+.clock {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 10px solid #000000;
+    border-radius: 50%;
+    background-color: #C0C0C0;
+  }
+  
+  .design {
+    width: 500px;
+    margin: auto;
+  }
+  
+  .hand {
+    position: absolute;
+    background-color: #000;
+    transform-origin: bottom center;
+  }
+  
+  .hour-hand {
+    background-color: red;
+    width: 6px;
+    height: 60px;
+    top: 43px;
+    left: 97px;
+    border-radius: 3px;
+  }
+  
+  .hour {
+    font-style: bold;
+  }
+  
+  .minute-hand {
+    width: 4px;
+    height: 80px;
+    top: 23px;
+    left: 98px;
+    border-radius: 2px;
+  }
+  
+  .second-hand {
+    width: 2px;
+    height: 90px;
+    top: 13px;
+    left: 99px;
+  }
+  
+  .clock-face {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #000000;
+    top: 94px;
+    left: 94px;
+    border-radius: 50%;
+  }
+  
+  .hour1 {
+    position: absolute;
+    top: 8px;
+    left: 130px;
+  }
+  
+  .hour2 {
+    position: absolute;
+    top: 35px;
+    left: 170px;
+  }
+  
+  .hour3 {
+    position: absolute;
+    top: 80px;
+    left: 190px;
+  }
+  
+  .hour4 {
+    position: absolute;
+    top: 130px;
+    left: 180px;
+  }
+  
+  .hour5 {
+    position: absolute;
+    top: 165px;
+    left: 145px;
+  }
+  
+  .hour6 {
+    position: absolute;
+    top: 180px;
+    left: 100px;
+  }
+  
+  .hour7 {
+    position: absolute;
+    top: 167px;
+    left: 50px;
+  }
+  
+  .hour8 {
+    position: absolute;
+    top: 130px;
+    left: 13px;
+  }
+  
+  .hour9 {
+    position: absolute;
+    top: 80px;
+    left: 5px;
+  }
+  
+  .hour10 {
+    position: absolute;
+    top: 35px;
+    left: 20px;
+  }
+  
+  .hour11 {
+    position: absolute;
+    top: 10px;
+    left: 50px;
+  }
+  
+  .hour12 {
+    position: absolute;
+    top: 0px;
+    left: 90px;
+  }
+  

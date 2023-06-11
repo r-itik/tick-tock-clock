@@ -13,7 +13,7 @@
   <div class="clock">
     <div class="clock-face">
       <div class="hand hour-hand"></div>
-      <div class="hand minute-hand"></div>
+      <div class="hand min-hand"></div>
       <div class="hand second-hand"></div>
     </div>
   </div>
@@ -59,7 +59,6 @@
       height: 100%;
       transform: translateY(-3px);
       /* account for the height of the clock hands */
-      align-items: baseline;
     }
 
     .hand {
@@ -70,8 +69,8 @@
       position: absolute;
       top: 50%;
       border-radius: 6px;
-      transform-origin: 100%;
       transform: rotate(90deg);
+      transform-origin: 100%;
       transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
     }
 
@@ -83,11 +82,10 @@
     .hand.min-hand {
       height: 3px;
       z-index: 10;
-      width: 40%;
+      width: 35%;
     }
 
     .hand.second-hand {
-      /* background: #ee791a; */
       width: 45%;
       height: 2px;
     }
@@ -100,21 +98,22 @@
       var hour = currentTime.getHours();
       var minute = currentTime.getMinutes();
       var second = currentTime.getSeconds();
+      console.log(minute)
 
       // Calculate angles
-      var hourAngle = (hour % 12) * 30 + (minute / 2);
-      var minuteAngle = minute * 6;
+      var hourAngle = ((hour%12) * 30) + (minute / 2);
+      var minuteAngle = (minute * 6) + (second / 10);
       var secondAngle = second * 6;
 
       // Get clock hands elements
       var hourHand = document.querySelector('.hour-hand');
-      var minuteHand = document.querySelector('.minute-hand');
+      var minuteHand = document.querySelector('.min-hand');
       var secondHand = document.querySelector('.second-hand');
 
       // Rotate clock hands
-      hourHand.style.transform = `rotate(${hourAngle}deg)`;
-      minuteHand.style.transform = `rotate(${minuteAngle}deg)`;
-      secondHand.style.transform = `rotate(${secondAngle}deg)`;
+      hourHand.style.transform = `rotate(${90+hourAngle}deg)`;
+      minuteHand.style.transform = `rotate(${90+minuteAngle}deg)`;
+      secondHand.style.transform = `rotate(${90+secondAngle}deg)`;
 
       // Update every second
       setTimeout(drawClock, 1000);
